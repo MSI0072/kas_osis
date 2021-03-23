@@ -5,8 +5,8 @@ setcookie('ascnsansan', '', time() + 1, '/');
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $email_ku = "osissman1pasuruan@gmail.com";
-    $password_ku = "Onesmasa";
+    $email_ku = "admin";
+    $password_ku = "admin";
     if ($email == $email_ku && $password == $password_ku) {
         setcookie('ascnsansan',  'asdsadjnerjejs', strtotime('+1 days'), '/');
 
