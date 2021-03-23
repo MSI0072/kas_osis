@@ -8,8 +8,6 @@ if (isset($_COOKIE['ascnsansan'])) {
 
 
 $title_page = 'Kas Wajib';
-setlocale(LC_ALL, 'id_ID.UTF8', 'id_ID.UTF-8', 'id_ID.8859-1', 'id_ID', 'IND.UTF8', 'IND.UTF-8', 'IND.8859-1', 'IND', 'Indonesian.UTF8', 'Indonesian.UTF-8', 'Indonesian.8859-1', 'Indonesian', 'Indonesia', 'id', 'ID', 'en_US.UTF8', 'en_US.UTF-8', 'en_US.8859-1', 'en_US', 'American', 'ENG', 'English');
-
 if ($_POST) {
     $id = $_POST['id'];
     $tgl = $_POST['tgl_bayar'];
@@ -121,7 +119,7 @@ include 'templates/header.php' ?>
                                 <label>Keterangan</label>
                                 <input type="text" class="form-control text-capitalize" id="keterangan" value="" name="keterangan" readonly>
                             </div>
-                            <input type="hidden" value="<?= strftime("%A, %d %B %Y", strtotime('2020-10-05')) ?>" name="tgl_bayar" id="tgl_bayar">
+                            <input type="hidden" value="<?= date('d F Y, h:i:s A') ?>" name="tgl_bayar" id="tgl_bayar">
                             <button type="submit" class="btn btn-primary" id="btn">Submit</button>
                         </form>
                     </form>
@@ -153,8 +151,8 @@ include 'templates/header.php' ?>
                                 <label>Keterangan</label>
                                 <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
                             </div>
-                            <input type="hidden" value="<?= strftime("%A, %d %B %Y", strtotime('2020-10-05')) ?>" name="tgl" id="tgl">
-                            <input type="hidden" class="text-lowcase" value="<?= strftime("%B") ?>" name="bulan" id="bulan">
+                            <input type="hidden" value="<?= date('d F Y, h:i:s A') ?>" name="tgl" id="tgl">
+                            <input type="hidden" class="text-lowcase" value="<?= date('F') ?>" name="bulan" id="bulan">
                             <button type="button" class="btn btn-primary btn-kirim" onclick="SubForm()" id="btn1">Submit</button>
                             <button class="btn btn-primary btn-loading d-none" type="button">
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
