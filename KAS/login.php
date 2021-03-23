@@ -10,7 +10,7 @@ if (isset($_POST['email'])) {
     if ($email == $email_ku && $password == $password_ku) {
         setcookie('ascnsansan',  'asdsadjnerjejs', strtotime('+1 days'), '/');
 
-        header('Location:' . $link . 'KAS/tambahkas.php');
+        header('Location:' . $link . 'KAS');
         exit;
     } else {
         $gagal = true;
